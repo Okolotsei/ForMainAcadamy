@@ -9,7 +9,7 @@ define('EMAIL', 'Okolotsei@gmail.com');
 $serch = strpos(EMAIL, '@');
 if($serch) {
     $username = substr(EMAIL, 0, $serch);
-    $domain = substr(EMAIL, $serch);
+    $domain = substr(EMAIL, $serch+1);
     echo $username . PHP_EOL;
     echo $domain . PHP_EOL;
 }
