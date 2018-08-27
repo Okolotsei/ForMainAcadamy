@@ -1,4 +1,47 @@
 <?php
+
+//Даны два массива: первый с элементами 1, 2, 3, второй с элементами 'a', 'b', 'c'. Сделайте из них массив с элементами 1, 2, 3, 'a', 'b', 'c'.
+$array1=[1,2,3];
+$array2=['a','b','c'];
+$resultarray = array_merge($array1,$array2);
+var_export($resultarray);
+exit();
+//Создайте массив, заполненный буквами от 'a' до 'z'.
+$array = range('a','z');
+var_export($array);
+exit();
+///Дан случайный массив. Найти в нем максимальную последовательность повторяющихся символов.
+///
+///
+
+$array=[1,1,1,2,2,2,2,3,3,3,3,3,3,3,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,4,5,5];
+$i=0;
+$num="";
+$resultarray=[];
+foreach ($array as $value){
+    if ($value==$num){
+        $i++;
+        $resultarray[$num]=$i;
+    }elseif ($i!==0) {
+        $resultarray[$num]=$i;
+        $num = $value;
+        $i=1;
+    }else{
+        $num=$value;
+        $i++;
+    }
+}
+//var_export($resultarray);
+$resultnum=0;
+$itemmax=0;
+foreach ($resultarray as $key=>$item){
+    if ($item>$itemmax){
+        $itemmax=$item;
+        $resultnum = $key;
+    }
+}
+echo "Значение $resultnum в масиве встречаеться максимальное количество раз[$itemmax]";
+exit();
 //Ваше задание — создать массив, наполнить его случайными значениями (можно использовать функцию rand),
 // найти максимальное и минимальное значение массива и поменять их местами.
 function ChangeMaxMin($array)
