@@ -3,12 +3,12 @@
 </head>
 <?php
 //6
-include 'Worker.php';
+include 'CLASS_class.php';
 $tag = new Tag();
 $tag->setText("cсылка")->setAttr('href', 'index.html')->Show();
 exit();
 //5
-include 'Worker.php';
+include 'CLASS_class.php';
 $log = new log();
 $log->SaveInLogfile("log1");
 $log->SaveInLogfile("log2");
@@ -25,13 +25,13 @@ $log->test('test')->name;
 
 exit();
 //4
-include 'Worker.php';
+include 'CLASS_class.php';
 $dima = new worker3("Dima",25,1000);
 echo $dima->getname() .PHP_EOL;
 echo $dima->getage() * $dima->getSalary();
 exit();
 //2-3
-include 'Worker.php';
+include 'CLASS_class.php';
 $ivan1 = new Worker2();
 $vasya1 = new Worker2();
 $ivan1->setName("ИВАН");
@@ -56,7 +56,7 @@ echo $salary1 + $salary2 .PHP_EOL;
 
 exit();
 //1
-include 'Worker.php';
+include 'CLASS_class.php';
 
 $ivan = new Worker();
 $vasya = new Worker();
